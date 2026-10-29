@@ -1,0 +1,21 @@
+{
+  "name": "CALMUN 2026 | Merkez Çanakkale Anadolu Lisesi Model UN",
+  "short_name": "CALMUN 2026",
+  "description": "Official website for CALMUN 2026 Model United Nations conference held on 4-5-6 December, 2026 at Merkez Çanakkale Anadolu Lisesi.",
+  "icons": [
+    {
+      "src": "images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#061421",
+  "background_color": "#061421",
+  "display": "standalone",
+  "start_url": "/"
+}

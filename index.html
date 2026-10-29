@@ -5,318 +5,1399 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Personal Potfolio</title>
+    <title>CALMUN 2026 | Merkez Çanakkale Anadolu Lisesi Model United Nations</title>
+    <meta name="description" content="Official website for CALMUN 2026 Model United Nations conference held on 4-5-6 December, 2026 at Merkez Çanakkale Anadolu Lisesi. #LeadersOfTheFuture">
+    
+    <!-- Security Headers & Content Security Policy (Cloudflare Security Audit Standards) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com; img-src 'self' data: https:; connect-src 'self' https://formsubmit.co; frame-src https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Boxicons with Subresource Integrity (SRI) -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" integrity="sha384-42kyIPf7HDYLkGffmxDhSx/3Z/53wGBs3nD6wEFxsbeDc7rMO6mkYbkAcpRsnMU2" crossorigin="anonymous">
+
+    <!-- Favicons & Mobile Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#061421">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
-    <!-- header design -->
-    <header class="header">
-        <a href="#" class="logo">Portfolio.<span class="animate" style="--i:1;"></span></a>
+    <!-- 2026 October Scroll-Driven Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
 
-        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+    <!-- ==========================================================================
+         HEADER & NAVBAR
+         ========================================================================== -->
+    <header class="header">
+        <div class="brand-container">
+            <img src="images/logo-white-transparent.png" alt="CALMUN 2026 Logo" class="brand-logo-img">
+            <a href="#home" class="logo">
+                <span class="logo-title">CALMUN 2026</span>
+                <span class="logo-sub">MERKEZ ÇANAKKALE ANADOLU LİSESİ</span>
+            </a>
+        </div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="nav-link active">Home</a>
 
-            <span class="active-nav"></span>
-            <span class="animate" style="--i:2;"></span>
+            <!-- CALMUN'26 Dropdown -->
+            <div class="nav-item">
+                <span class="nav-link">CALMUN’26 <i class='bx bx-chevron-down'></i></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#secgen"><i class='bx bxs-envelope'></i> Secretary General's Letter</a></li>
+                    <li><a href="#apply"><i class='bx bxs-edit'></i> Apply</a></li>
+                    <li><a href="#schedule"><i class='bx bxs-calendar'></i> Schedule</a></li>
+                    <li><a href="#academic-team"><i class='bx bxs-graduation'></i> Academic Team</a></li>
+                    <li><a href="#organization-team"><i class='bx bxs-group'></i> Organization Team</a></li>
+                    <li><a href="#venue"><i class='bx bxs-map-pin'></i> Venue</a></li>
+                </ul>
+            </div>
+
+            <!-- COMMITTEES Dropdown -->
+            <div class="nav-item">
+                <a href="#committees" class="nav-link">COMMITTEES <i class='bx bx-chevron-down'></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#committees"><i class='bx bx-briefcase'></i> ILO (Labour)</a></li>
+                    <li><a href="#committees"><i class='bx bx-globe'></i> UNEP (Environment)</a></li>
+                    <li><a href="#committees"><i class='bx bx-shield-quarter'></i> UNHRC (Human Rights)</a></li>
+                    <li><a href="#committees"><i class='bx bx-lock-alt'></i> UNODC (Drugs & Crime)</a></li>
+                </ul>
+            </div>
+
+            <!-- MORE INFO Dropdown -->
+            <div class="nav-item">
+                <span class="nav-link">MORE INFO <i class='bx bx-chevron-down'></i></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#faq"><i class='bx bx-help-circle'></i> FAQ</a></li>
+                    <li><a href="#contact"><i class='bx bx-phone-call'></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <a href="#apply" class="nav-cta-btn open-apply-btn"><i class='bx bxs-check-shield'></i> APPLY NOW</a>
         </nav>
     </header>
 
-    <!-- home section design -->
-    <section class="home show-animate" id="home">
+    <!-- ==========================================================================
+         HERO SECTION (Canakkale Martyrs' Memorial Background)
+         ========================================================================== -->
+    <section class="home" id="home">
+        <!-- Ambient Fluid Aurora Glow Orbs (2026 October Motion Trend) -->
+        <div class="ambient-glow-orb orb-1" aria-hidden="true"></div>
+        <div class="ambient-glow-orb orb-2" aria-hidden="true"></div>
+
         <div class="home-content">
-            <h1>Hi, I'm <span>Nishat Mahmud</span><span class="animate" style="--i:2;"></span></h1>
-            <div class="text-animate">
-                <h3>Front-End Developer</h3>
-                <span class="animate" style="--i:3;"></span>
+            <div class="hero-pill-badge">
+                <span class="live-beacon"></span>
+                <i class='bx bxs-star'></i> First Edition • Public High School Model UN
             </div>
-            <p>I am a dedicated, self-assured, and eager learner who is constantly looking for opportunities to pick up
-                the new abilities.
-                I particularly want to put my knowledge and experience in Graphic Design, Web Development, and Android
-                Development to use.
-                To the best of my knowledge, avidly seeks to serve a professional organization with sincere devotion,
-                diligence, and commitment.
-                I have five years of experience managing a YouTube channel, therefore I also have knowledge with video
-                editing.
-                <span class="animate" style="--i:4;"></span>
+            <h1>CALMUN <span class="gradient-text">2026</span></h1>
+            <div class="text-animate">
+                <h3>MODEL UNITED NATIONS</h3>
+            </div>
+            
+            <div class="hero-dates">
+                <i class='bx bxs-calendar-event'></i>
+                <span>4 - 5 - 6 December, 2026</span>
+            </div>
+
+            <p class="hero-desc">
+                Welcome to Merkez Çanakkale Anadolu Lisesi Model United Nations. A premier academic platform uniting tomorrow's leaders to debate, negotiate, and champion sustainable diplomacy.
             </p>
 
             <div class="btn-box">
-                <a href="#" class="btn">Hire Me</a>
-                <a href="#" class="btn">Let's Talk</a>
-                <span class="animate" style="--i:5;"></span>
+                <a href="#apply" class="btn open-apply-btn"><i class='bx bxs-edit-alt'></i> APPLY NOW</a>
+                <a href="#committees" class="btn btn-outline"><i class='bx bx-compass'></i> EXPLORE COMMITTEES</a>
+            </div>
+
+            <div class="countdown-container">
+                <span class="countdown-label">Conference Starts In:</span>
+                <div class="countdown-boxes">
+                    <div class="time-box">
+                        <span class="num" id="days">00</span>
+                        <span class="txt">Days</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="num" id="hours">00</span>
+                        <span class="txt">Hours</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="num" id="minutes">00</span>
+                        <span class="txt">Mins</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="num" id="seconds">00</span>
+                        <span class="txt">Secs</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="home-sci">
-            <a href="#"><i class='bx bxl-facebook'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <span class="animate" style="--i:6;"></span>
+        <div class="home-logo-showcase">
+            <div class="logo-spin-wrap">
+                <img src="images/logo-white-transparent.png" alt="CALMUN 2026 Emblem" class="hero-main-logo">
+            </div>
         </div>
-
-        <div class="home-imgHover"></div>
-        <span class="animate home-img" style="--i:7;"></span>
     </section>
 
-    <!-- about section design -->
-    <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
+    <!-- ==========================================================================
+         LETTER FROM THE SECRETARY GENERAL
+         ========================================================================== -->
+    <section class="secgen" id="secgen">
+        <h2 class="heading">Letter From The <span>Secretary General</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
 
-        <div class="about-img">
-            <img src="images/about.jpg" alt="">
-            <span class="circle-spin"></span>
-            <span class="animate scroll" style="--i:2;"></span>
+        <div class="letter-section">
+            <div class="letter-card">
+                <div class="letter-header">
+                    <h3 class="letter-salutation">Most Distinguished Members of the MUN Community,</h3>
+                </div>
+
+                <div class="letter-body">
+                    <p>
+                        It is my utmost pleasure and honor to welcome you to the first edition of CALMUN. For the first time this year, we have the privilege of welcoming you as the first public school in Çanakkale to organize and host a Model United Nations Conference. On behalf of the entire CALMUN family, I extend my warmest greetings to every delegate, advisor, and participant who has chosen to be a part of this journey.
+                    </p>
+                    <p>
+                        We gather at a time when the world faces numerous challenges. From political polarization and the fight against organized crime to climate crises and biological conflicts, the international community is constantly being tested in its ability to cooperate and find sustainable solutions. In such a world, the need for understanding, diplomacy, and working together becomes more crucial than ever.
+                    </p>
+                    <p>
+                        This is precisely where Model United Nations finds its true significance. Since the beginning of my own journey, I have believed that this community is not only an academic platform but also a place where individuals can exchange ideas, express themselves, and engage with bright minds who come together with shared aspirations. Throughout my experience in MUN, each conference has taught me that diplomacy is not simply about defending a position; rather, it is about listening attentively, understanding different perspectives, embracing compromise, and finding common ground even in the face of disagreement.
+                    </p>
+                    <p>
+                        As wars persist, inequalities deepen, and societal divides seem to widen, it may sometimes feel that cooperation struggles to keep pace with conflict. Yet, history has repeatedly shown that meaningful change rarely begins with certainty; it begins with those who refuse to accept the world as it is.
+                    </p>
+
+                    <div class="letter-quote-block">
+                        “There are no hopeless situations, but only hopeless people.”
+                    </div>
+
+                    <p>
+                        It is in that spirit that we should continue striving for a better, brighter, and more peaceful future—one where everyone can share their ideas, their joy, and their respect for one another. I firmly believe that through our collective efforts, this future is within reach.
+                    </p>
+                    <p>
+                        On this note, I would like to extend my heartfelt thanks to every member of the CALMUN Academy and Operations Teams for their unwavering dedication. Their efforts ensure that each of you has the best possible experience, both inside and outside the committee sessions.
+                    </p>
+                    <p>
+                        Once again, on behalf of the CALMUN Organization, it is my immense pleasure to welcome you to the Merkez Çanakkale Anadolu Lisesi Model United Nations Conference. We hope to create a place in your long-lasting memories and make every second you spend with us truly unforgettable. We believe that you are the future, and witnessing you broaden your perspectives and develop your voices will be one of our greatest honors.
+                    </p>
+                    <p>
+                        I look forward to welcoming you in person very soon.<br>
+                        <em>For a better tomorrow.</em>
+                    </p>
+                </div>
+
+                <div class="letter-sign">
+                    <div class="sign-meta">
+                        <div class="sign-regards">Yours sincerely,</div>
+                        <div class="sign-name">İDİL BAŞER</div>
+                        <div class="sign-title">SECRETARY GENERAL</div>
+                    </div>
+                    <div class="sign-badge">
+                        <i class='bx bxs-badge-check'></i> CALMUN'26 Secretariat
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         COMMITTEES SECTION
+         ========================================================================== -->
+    <section class="committees" id="committees">
+        <h2 class="heading">Our <span>Committees</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
+
+        <div class="committees-grid">
+            <!-- ILO Card -->
+            <div class="committee-card">
+                <div class="committee-img-wrap">
+                    <img src="images/committee-ilo.jpg" alt="ILO Committee">
+                    <span class="committee-badge-tag">ILO</span>
+                </div>
+                <div class="committee-content">
+                    <h3>ILO</h3>
+                    <div class="committee-fullname">International Labour Organization</div>
+                    <div class="committee-agenda-preview">
+                        <strong>Agenda Item:</strong>
+                        Expanding Universal Social Protection in Changing Labour Markets
+                    </div>
+                    <div class="committee-actions">
+                        <button class="btn-more-info" data-committee="ilo">
+                            <i class='bx bx-info-circle'></i> More Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UNEP Card -->
+            <div class="committee-card">
+                <div class="committee-img-wrap">
+                    <img src="images/committee-unep.jpg" alt="UNEP Committee">
+                    <span class="committee-badge-tag">UNEP</span>
+                </div>
+                <div class="committee-content">
+                    <h3>UNEP</h3>
+                    <div class="committee-fullname">United Nations Environment Programme</div>
+                    <div class="committee-agenda-preview">
+                        <strong>Agenda Item:</strong>
+                        Transitioning to Sustainable Energy Resources and Implementing Nature-Based Solutions
+                    </div>
+                    <div class="committee-actions">
+                        <button class="btn-more-info" data-committee="unep">
+                            <i class='bx bx-info-circle'></i> More Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UNHRC Card -->
+            <div class="committee-card">
+                <div class="committee-img-wrap">
+                    <img src="images/committee-unhrc.jpg" alt="UNHRC Committee">
+                    <span class="committee-badge-tag">UNHRC</span>
+                </div>
+                <div class="committee-content">
+                    <h3>UNHRC</h3>
+                    <div class="committee-fullname">United Nations Human Rights Council</div>
+                    <div class="committee-agenda-preview">
+                        <strong>Agenda Item:</strong>
+                        Preventing Crimes Against Humanity and Strengthening Accountability Mechanisms
+                    </div>
+                    <div class="committee-actions">
+                        <button class="btn-more-info" data-committee="unhrc">
+                            <i class='bx bx-info-circle'></i> More Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UNODC Card -->
+            <div class="committee-card">
+                <div class="committee-img-wrap">
+                    <img src="images/committee-unodc.jpg" alt="UNODC Committee">
+                    <span class="committee-badge-tag">UNODC</span>
+                </div>
+                <div class="committee-content">
+                    <h3>UNODC</h3>
+                    <div class="committee-fullname">United Nations Office on Drugs and Crime</div>
+                    <div class="committee-agenda-preview">
+                        <strong>Agenda Item:</strong>
+                        Combating The Production and Distribution of Counterfeit Goods
+                    </div>
+                    <div class="committee-actions">
+                        <button class="btn-more-info" data-committee="unodc">
+                            <i class='bx bx-info-circle'></i> More Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         ACADEMIC TEAM SECTION
+         ========================================================================== -->
+    <section class="academic-team" id="academic-team">
+        <h2 class="heading">Academic <span>Team</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
+
+        <div class="team-container">
+            <div class="team-grid">
+                <!-- Secretary General -->
+                <div class="team-card">
+                    <div class="team-avatar"><i class='bx bxs-star'></i></div>
+                    <h4>İdil Başer</h4>
+                    <div class="team-role">Secretary General</div>
+                    <div class="team-dept">Academic Leadership</div>
+                </div>
+
+                <!-- USG UNHRC -->
+                <div class="team-card">
+                    <div class="team-avatar"><i class='bx bx-shield-quarter'></i></div>
+                    <h4>Poyraz Perit Dilber</h4>
+                    <div class="team-role">Under-Secretary-General</div>
+                    <div class="team-dept">UNHRC Committee</div>
+                </div>
+
+                <!-- USG UNEP -->
+                <div class="team-card">
+                    <div class="team-avatar"><i class='bx bx-globe'></i></div>
+                    <h4>Ecrin Ertürk</h4>
+                    <div class="team-role">Under-Secretary-General</div>
+                    <div class="team-dept">UNEP Committee</div>
+                </div>
+
+                <!-- USG UNODC -->
+                <div class="team-card">
+                    <div class="team-avatar"><i class='bx bx-lock-alt'></i></div>
+                    <h4>Charlotte Ela Akın</h4>
+                    <div class="team-role">Under-Secretary-General</div>
+                    <div class="team-dept">UNODC Committee</div>
+                </div>
+
+                <!-- USG ILO -->
+                <div class="team-card">
+                    <div class="team-avatar"><i class='bx bx-briefcase'></i></div>
+                    <h4>Mina Dönmez</h4>
+                    <div class="team-role">Under-Secretary-General</div>
+                    <div class="team-dept">ILO Committee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         ORGANIZATION TEAM SECTION & DIRECTOR GENERAL'S LETTER
+         ========================================================================== -->
+    <section class="organization-team" id="organization-team">
+        <h2 class="heading">Organization <span>Team</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
+
+        <div class="letter-section" style="margin-bottom: 5rem;">
+            <div class="letter-card">
+                <div class="letter-header">
+                    <h3 class="letter-salutation">Letter from the Director General</h3>
+                    <div style="font-size: 1.6rem; color: var(--text-muted); font-weight: 500;">Distinguished Participants,</div>
+                </div>
+
+                <div class="letter-body">
+                    <p>
+                        It is my great honor to welcome you to CALMUN 2026, marking the beginning of a new tradition at Merkez Çanakkale Anadolu Lisesi.
+                    </p>
+                    <p>
+                        At CALMUN, we believe tomorrow’s leaders are shaped by learning, questioning, and understanding today’s world. As a public high school conference, we provide a platform for young people to challenge each other, exchange perspectives, and discover the importance of diplomacy, cooperation, and dialogue.
+                    </p>
+                    <p>
+                        Diplomacy requires not only speaking, but also listening, understanding different perspectives, and finding common ground. At CALMUN, we strive to foster an environment where ideas are valued, differences are respected, and every participant can grow.
+                    </p>
+                    <p>
+                        As we open the doors to our first edition, we see CALMUN as more than a conference. It stands out for its commitment to fostering intercultural understanding, emphasizing local and global perspectives unique to Merkez Çanakkale Anadolu Lisesi. Our objective was never simply to organize another Model United Nations conference. We sought to create an experience that would challenge you academically, connect you socially, and leave a lasting impression long after the closing ceremony. Every detail of CALMUN reflects the dedication of an incredible team whose commitment and passion have transformed this vision into reality.
+                    </p>
+                    <p>
+                        Whether this is your first conference or your fiftieth, I encourage you to approach every moment with curiosity and confidence. Debate fearlessly, listen openly, and embrace every opportunity that comes your way. The most memorable experiences often emerge when we allow ourselves to step beyond the familiar.
+                    </p>
+                    <p>
+                        I would like to thank everyone who has contributed to making this vision a reality. To all delegates, chairs, advisors, and guests: thank you for becoming a part of our story. Your presence is what gives this conference its purpose, its energy, and its spirit. I could not be more honored to serve as its Director General.
+                    </p>
+                    <p>
+                        The future is shaped by those who dare to think, have the courage to speak, and possess the wisdom to listen. At CALMUN, we believe in the potential of every young mind to make a difference.
+                    </p>
+                    <p>
+                        On behalf of the entire Secretariat and Organization Team, I am delighted to welcome you to CALMUN’26 — <strong>Leaders of the Future</strong>.<br>
+                        <em>The floor is yours.</em>
+                    </p>
+                </div>
+
+                <div class="letter-sign">
+                    <div class="sign-meta">
+                        <div class="sign-regards">With my sincere regards,</div>
+                        <div class="sign-name">DİLA KOZA KESİM</div>
+                        <div class="sign-title">DIRECTOR GENERAL</div>
+                    </div>
+                    <div class="sign-badge">
+                        <i class='bx bxs-certification'></i> CALMUN'26 Operations
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="about-content">
-            <h3>Hi there! Glad to see you here.<span class="animate scroll" style="--i:3;"></span></h3>
-            <p>Hello! Nishat Mahmud here. A technology fanatic!<br>
-                Currently, I am enrolled in the Department of
-                Computer Science and Engineering at Jagannath
-                University in Dhaka. My early education was
-                completed from Mymensingh Zilla School and Govt.
-                Ananda Mohon College in Mymensingh.
-                <span class="animate scroll" style="--i:4;"></span>
+        <!-- Organization Departments Grid -->
+        <div class="team-container">
+            <h3 style="text-align: center; font-size: 2.4rem; color: #ffffff; margin-bottom: 2rem;">Organization Departments & Leads</h3>
+            <div class="dept-grid">
+                <!-- PR -->
+                <div class="dept-card">
+                    <div class="dept-card-header">
+                        <div class="dept-icon"><i class='bx bx-broadcast'></i></div>
+                        <h4>Public Relations Team</h4>
+                    </div>
+                    <ul class="dept-members">
+                        <li>
+                            <span>Zeynep Ada Akgül</span>
+                            <span class="role-tag">Head of PR</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Admin -->
+                <div class="dept-card">
+                    <div class="dept-card-header">
+                        <div class="dept-icon"><i class='bx bx-id-card'></i></div>
+                        <h4>Administrative Staff Team</h4>
+                    </div>
+                    <ul class="dept-members">
+                        <li>
+                            <span>Duru Koray</span>
+                            <span class="role-tag">Head of Admin</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Logistics -->
+                <div class="dept-card">
+                    <div class="dept-card-header">
+                        <div class="dept-icon"><i class='bx bx-package'></i></div>
+                        <h4>Logistics Team</h4>
+                    </div>
+                    <ul class="dept-members">
+                        <li>
+                            <span>Sarp Gürsoy</span>
+                            <span class="role-tag">Co-head of Logistics</span>
+                        </li>
+                        <li>
+                            <span>Kayra Manav</span>
+                            <span class="role-tag">Co-head of Logistics</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Media -->
+                <div class="dept-card">
+                    <div class="dept-card-header">
+                        <div class="dept-icon"><i class='bx bx-camera'></i></div>
+                        <h4>Media and Press Team</h4>
+                    </div>
+                    <ul class="dept-members">
+                        <li>
+                            <span>Irmak Derya Yalçın</span>
+                            <span class="role-tag">Head of Media</span>
+                        </li>
+                        <li>
+                            <span>İrem Diken</span>
+                            <span class="role-tag">Associate of the Press</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         APPLICATIONS SECTION
+         ========================================================================== -->
+    <section class="apply" id="apply">
+        <h2 class="heading">Conference <span>Applications</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
+
+        <div class="apply-grid">
+            <!-- Delegation Card -->
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Group Delegation</div>
+                <div class="pricing-header">
+                    <h3>Delegation</h3>
+                    <div class="pricing-note">*Minimum of 3 people required</div>
+                </div>
+
+                <div class="tier-rows">
+                    <div class="tier-row active-tier">
+                        <span class="tier-label">Early Bird</span>
+                        <span class="tier-price">3800 TL</span>
+                    </div>
+                    <div class="tier-row">
+                        <span class="tier-label">Regular</span>
+                        <span class="tier-price">3900 TL</span>
+                    </div>
+                    <div class="tier-row">
+                        <span class="tier-label">Late</span>
+                        <span class="tier-price">4000 TL</span>
+                    </div>
+                </div>
+
+                <div class="perks-list-title">Your payment will include:</div>
+                <ul class="perks-list">
+                    <li><i class='bx bxs-check-circle'></i> Welcome pack</li>
+                    <li><i class='bx bxs-check-circle'></i> All materials and tools</li>
+                    <li><i class='bx bxs-check-circle'></i> Lunch for 3 days</li>
+                    <li><i class='bx bxs-check-circle'></i> Appetizers & drinks during coffee breaks</li>
+                    <li><i class='bx bxs-check-circle'></i> Official Certificate (Hard Copy)</li>
+                </ul>
+
+                <button class="btn btn-apply-tier open-apply-btn" data-apply-type="delegation">
+                    <i class='bx bx-send'></i> APPLY AS DELEGATION
+                </button>
+            </div>
+
+            <!-- Individual Delegate Card -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Individual Delegate</h3>
+                    <div class="pricing-note">Single Participant Registration</div>
+                </div>
+
+                <div class="tier-rows">
+                    <div class="tier-row active-tier">
+                        <span class="tier-label">Early Bird</span>
+                        <span class="tier-price">1400 TL</span>
+                    </div>
+                    <div class="tier-row">
+                        <span class="tier-label">Regular</span>
+                        <span class="tier-price">1500 TL</span>
+                    </div>
+                    <div class="tier-row">
+                        <span class="tier-label">Late</span>
+                        <span class="tier-price">1600 TL</span>
+                    </div>
+                </div>
+
+                <div class="perks-list-title">Your payment will include:</div>
+                <ul class="perks-list">
+                    <li><i class='bx bxs-check-circle'></i> Welcome pack</li>
+                    <li><i class='bx bxs-check-circle'></i> All materials and tools</li>
+                    <li><i class='bx bxs-check-circle'></i> Lunch for 3 days</li>
+                    <li><i class='bx bxs-check-circle'></i> Appetizers & drinks during coffee breaks</li>
+                    <li><i class='bx bxs-check-circle'></i> Official Certificate (Hard Copy)</li>
+                </ul>
+
+                <button class="btn btn-apply-tier open-apply-btn" data-apply-type="individual">
+                    <i class='bx bx-user-plus'></i> APPLY AS INDIVIDUAL
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         SCHEDULE SECTION
+         ========================================================================== -->
+    <section class="schedule" id="schedule">
+        <h2 class="heading">Conference <span>Schedule</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
+
+        <div class="schedule-container">
+            <div class="schedule-tabs">
+                <button class="schedule-tab-btn active" data-day="day1">
+                    <i class='bx bx-calendar'></i> Day 1 (Friday, Dec 4)
+                </button>
+                <button class="schedule-tab-btn" data-day="day2">
+                    <i class='bx bx-calendar'></i> Day 2 (Saturday, Dec 5)
+                </button>
+                <button class="schedule-tab-btn" data-day="day3">
+                    <i class='bx bx-calendar'></i> Day 3 (Sunday, Dec 6)
+                </button>
+            </div>
+
+            <!-- Day 1 Schedule -->
+            <div class="schedule-content active" id="schedule-day1">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 09.00 – 10.15</span>
+                        <span class="timeline-title">Registration & Welcome Pack Distribution</span>
+                        <span class="timeline-badge">Check-in</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 10.45 – 11.45</span>
+                        <span class="timeline-title">Opening Ceremony</span>
+                        <span class="timeline-badge">Auditorium</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 12.00 – 12.30</span>
+                        <span class="timeline-title">Session 1 (Roll Call & Committee Opening)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                    <div class="timeline-item break-item">
+                        <span class="timeline-time"><i class='bx bx-restaurant'></i> 13.00 – 14.30</span>
+                        <span class="timeline-title">Lunch Break</span>
+                        <span class="timeline-badge">Dining Hall</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 14.30 – 16.00</span>
+                        <span class="timeline-title">Session 2 (General Speakers List & Caucuses)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                    <div class="timeline-item break-item">
+                        <span class="timeline-time"><i class='bx bx-coffee'></i> 16.00 – 16.30</span>
+                        <span class="timeline-title">Coffee Break & Social Interaction</span>
+                        <span class="timeline-badge">Foyer</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 16.30 – 17.30</span>
+                        <span class="timeline-title">Session 3 (Moderated Debate)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 Schedule -->
+            <div class="schedule-content" id="schedule-day2">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 09.00 – 10.30</span>
+                        <span class="timeline-title">Session 4 (Working Papers Deliberation)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                    <div class="timeline-item break-item">
+                        <span class="timeline-time"><i class='bx bx-coffee'></i> 10.30 – 11.00</span>
+                        <span class="timeline-title">Coffee Break</span>
+                        <span class="timeline-badge">Foyer</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 11.00 – 13.00</span>
+                        <span class="timeline-title">Session 5 (Unmoderated Drafting & Negotiations)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                    <div class="timeline-item break-item">
+                        <span class="timeline-time"><i class='bx bx-restaurant'></i> 13.00 – 14.30</span>
+                        <span class="timeline-title">Lunch Break</span>
+                        <span class="timeline-badge">Dining Hall</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 14.30 – 16.00</span>
+                        <span class="timeline-title">Session 6 (Draft Resolutions Introduction)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                    <div class="timeline-item break-item">
+                        <span class="timeline-time"><i class='bx bx-coffee'></i> 16.00 – 16.30</span>
+                        <span class="timeline-title">Coffee Break</span>
+                        <span class="timeline-badge">Foyer</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 16.30 – 17.30</span>
+                        <span class="timeline-title">Session 7 (Amendments & Debate)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 Schedule -->
+            <div class="schedule-content" id="schedule-day3">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 09.00 – 10.30</span>
+                        <span class="timeline-title">Session 8 (Final Amendments Review)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                    <div class="timeline-item break-item">
+                        <span class="timeline-time"><i class='bx bx-coffee'></i> 10.30 – 11.00</span>
+                        <span class="timeline-title">Coffee Break</span>
+                        <span class="timeline-badge">Foyer</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 11.00 – 13.00</span>
+                        <span class="timeline-title">Session 9 (Voting Procedure on Draft Resolutions)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                    <div class="timeline-item break-item">
+                        <span class="timeline-time"><i class='bx bx-restaurant'></i> 13.00 – 14.30</span>
+                        <span class="timeline-title">Lunch Break</span>
+                        <span class="timeline-badge">Dining Hall</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time"><i class='bx bx-time-five'></i> 14.30 – 16.00</span>
+                        <span class="timeline-title">Session 10 (Committee Feedback & Wrap-up)</span>
+                        <span class="timeline-badge">Committee Rooms</span>
+                    </div>
+                    <div class="timeline-item break-item">
+                        <span class="timeline-time"><i class='bx bxs-award'></i> 17.00 – 18.30</span>
+                        <span class="timeline-title">Closing Ceremony & Awards Presentation</span>
+                        <span class="timeline-badge">Main Auditorium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         VENUE SECTION (Canakkale Anadolu Lisesi & Google Maps Embed)
+         ========================================================================== -->
+    <section class="venue" id="venue">
+        <h2 class="heading">Conference <span>Venue</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
+
+        <div class="venue-wrapper">
+            <div class="venue-card">
+                <div class="venue-img-wrap">
+                    <img src="images/school-building.jpg" alt="Merkez Çanakkale Anadolu Lisesi Yerleşkesi">
+                </div>
+                <div class="venue-info">
+                    <div>
+                        <div class="venue-school-header">
+                            <img src="images/school-logo.png" alt="Merkez Çanakkale Anadolu Lisesi Logosu" class="school-badge-logo">
+                            <div>
+                                <h3>Merkez Çanakkale Anadolu Lisesi</h3>
+                                <div class="school-est"><i class='bx bxs-institution'></i> Kuruluş 1949</div>
+                            </div>
+                        </div>
+
+                        <div class="venue-address">
+                            <i class='bx bxs-map'></i>
+                            <a href="https://maps.app.goo.gl/wsjpLr85dwcMqd847" target="_blank" rel="noopener noreferrer" class="map-deeplink" title="Harita Uygulamasında Aç">
+                                İsmetpaşa Mahallesi, Saim Özen Sokak, No: 19 17100 Çanakkale
+                                <i class='bx bx-link-external' style="font-size: 1.4rem;"></i>
+                            </a>
+                        </div>
+
+                        <a href="https://canakkaleanadolulisesi.meb.k12.tr/" target="_blank" rel="noopener noreferrer" class="school-web-btn" title="Okul Resmi MEB Web Sitesi">
+                            <i class='bx bx-globe'></i> canakkaleanadolulisesi.meb.k12.tr <i class='bx bx-link-external'></i>
+                        </a>
+
+                        <p style="font-size: 1.45rem; color: #cbd5e1; margin-bottom: 2rem;">
+                            Our conference will take place at the historic and modern educational campus of Merkez Çanakkale Anadolu Lisesi, offering fully equipped committee chambers, debate rooms, dining halls, and an expansive main auditorium.
+                        </p>
+                    </div>
+                    <div class="venue-transport-box">
+                        <i class='bx bxs-info-circle'></i> For further transportation information, please contact us via email at: 
+                        <a href="mailto:calmunofficial@gmail.com">calmunofficial@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <!-- Google Maps Embed with Exact Pinpoint for Merkez Çanakkale Anadolu Lisesi (MÇAL) -->
+                <iframe 
+                    title="Merkez Çanakkale Anadolu Lisesi Harita Konumu"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.241512404098!2d26.415302976527586!3d40.14937837148386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b1a9d5dd05a8af%3A0xd6edbfde5d2d1c97!2sMerkez%20%C3%87anakkale%20Anadolu%20Lisesi%20(M%C3%87AL)!5e0!3m2!1str!2str!4v1730199500000!5m2!1str!2str"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ SECTION
+         ========================================================================== -->
+    <section class="faq" id="faq">
+        <h2 class="heading">Frequently Asked <span>Questions</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
+
+        <div class="faq-container">
+            <!-- Q1 -->
+            <div class="faq-item">
+                <div class="faq-header">
+                    <h4><i class='bx bx-question-mark'></i> What is MUN?</h4>
+                    <i class='bx bx-chevron-down faq-icon'></i>
+                </div>
+                <div class="faq-body">
+                    <div class="faq-body-content">
+                        Model United Nations, also known as Model UN or MUN, is an educational simulation in which students learn about diplomacy, international relations, and the United Nations. At a MUN conference, students work as the representatives of a country, organization, or person and must solve a problem with other delegates from around the world.
+                        <br><br>
+                        Delegates conduct research before conferences: they must formulate position papers and create policy proposals that they will debate with other delegates in their committee. At the end of a conference, delegates will vote on written policies (called draft resolutions) to pass them with a majority vote. The best-performing delegates in each committee, as well as delegations, are sometimes recognized with awards.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="faq-item">
+                <div class="faq-header">
+                    <h4><i class='bx bx-support'></i> Who can I approach if I have a problem or need assistance during the conference?</h4>
+                    <i class='bx bx-chevron-down faq-icon'></i>
+                </div>
+                <div class="faq-body">
+                    <div class="faq-body-content">
+                        Our Public Relations team’s primary goal is to assist you with anything and listen to your problems! You can seek out a PR team member (they are very easy to spot throughout the venue), and if they cannot help you themselves, they will guide you to someone who can.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="faq-item">
+                <div class="faq-header">
+                    <h4><i class='bx bx-certification'></i> Will participants be given certificates at the end of the conference?</h4>
+                    <i class='bx bx-chevron-down faq-icon'></i>
+                </div>
+                <div class="faq-body">
+                    <div class="faq-body-content">
+                        Yes! All delegates who miss no more than two full sessions will receive an official participation certificate (Hard Copy). Outstanding delegates will also be recognized with academic awards during the Closing Ceremony.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="faq-item">
+                <div class="faq-header">
+                    <h4><i class='bx bx-restaurant'></i> Will food be provided to participants during the conference?</h4>
+                    <i class='bx bx-chevron-down faq-icon'></i>
+                </div>
+                <div class="faq-body">
+                    <div class="faq-body-content">
+                        Yes! Three days of food (delicious lunches and warm appetizers, snacks, and drinks during morning and afternoon coffee breaks) are fully included in the application fee.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="faq-item">
+                <div class="faq-header">
+                    <h4><i class='bx bx-book-open'></i> What is your procedure?</h4>
+                    <i class='bx bx-chevron-down faq-icon'></i>
+                </div>
+                <div class="faq-body">
+                    <div class="faq-body-content">
+                        We follow the <strong>Harvard procedure</strong>. Our rules allow delegates to exercise parliamentary motions, moderated and unmoderated caucuses, and formal resolution drafting in accordance with standard international Harvard Model UN guidelines.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us</span></h2>
+        <div class="sub-heading-tag">#LeadersOfTheFuture</div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info-panel">
+                <div>
+                    <h3>Get In Touch</h3>
+                    <p class="intro">
+                        Have questions regarding committee agendas, delegation allocations, accommodation, or transportation in Çanakkale? Reach out to our Secretariat and PR teams.
+                    </p>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class='bx bx-map-pin'></i></div>
+                        <div class="contact-item-text">
+                            <h5>Adres</h5>
+                            <a href="https://maps.app.goo.gl/wsjpLr85dwcMqd847" target="_blank" rel="noopener noreferrer" class="map-deeplink" title="Harita Uygulamasında Aç">
+                                İsmetpaşa Mahallesi, Saim Özen Sokak, No: 19 17100 Çanakkale
+                                <i class='bx bx-link-external' style="font-size: 1.4rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class='bx bx-envelope'></i></div>
+                        <div class="contact-item-text">
+                            <h5>Official Email</h5>
+                            <a href="mailto:calmunofficial@gmail.com">calmunofficial@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class='bx bx-calendar-check'></i></div>
+                        <div class="contact-item-text">
+                            <h5>Conference Dates</h5>
+                            <p>4 - 5 - 6 December, 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="font-size: 1.35rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem;">
+                    Merkez Çanakkale Anadolu Lisesi Model United Nations Secretariat
+                </div>
+            </div>
+
+            <div class="contact-form-panel">
+                <form id="contactForm" action="https://formsubmit.co/calmunofficial@gmail.com" method="POST">
+                    <!-- FormSubmit Configurations & Anti-Spam Honeypot (Cloudflare Security) -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="[CALMUN 2026] Yeni İletişim Mesajı">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <div class="form-group">
+                        <label for="contactName">Full Name / Ad Soyad</label>
+                        <input type="text" id="contactName" name="Full_Name" placeholder="Enter your full name" maxlength="100" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address / E-posta</label>
+                        <input type="email" id="contactEmail" name="Email" placeholder="Enter your email address" maxlength="120" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">Subject / Konu</label>
+                        <select id="contactSubject" name="Subject" required>
+                            <option value="General Inquiry">General Inquiry (Genel Bilgi)</option>
+                            <option value="Application & Registration">Application & Registration (Başvuru ve Kayıt)</option>
+                            <option value="Committee & Study Guide">Committee & Study Guide (Komite ve Çalışma Rehberi)</option>
+                            <option value="Logistics & Transportation">Logistics & Transportation (Ulaşım ve Lojistik)</option>
+                            <option value="Press & Media">Press & Media (Basın ve Medya)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Message / Mesaj</label>
+                        <textarea id="contactMessage" name="Message" placeholder="How can we assist you?" maxlength="2000" required></textarea>
+                    </div>
+
+                    <div class="form-checkbox-group">
+                        <input type="checkbox" id="contactKvkk" name="Consent_KVKK_GDPR" required>
+                        <label for="contactKvkk">
+                            <a href="#" class="open-privacy-btn" data-tab="kvkk">KVKK Aydınlatma Metni</a>, <a href="#" class="open-privacy-btn" data-tab="acik-riza">Açık Rıza Metni</a> ve <a href="#" class="open-privacy-btn" data-tab="gdpr">GDPR Privacy Notice</a>'ı okudum. Kişisel verilerimin bu kapsamda işlenmesine onay veriyorum. *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn" id="contactSubmitBtn" style="width: 100%;">
+                        <i class='bx bx-paper-plane'></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h4>CALMUN 2026</h4>
+                <p>
+                    Merkez Çanakkale Anadolu Lisesi Model United Nations is a premier public high school conference empowering young minds through international diplomacy, debate, and cooperative problem-solving.
+                </p>
+                <p style="color: var(--accent-gold); font-weight: 600;">#LeadersOfTheFuture</p>
+            </div>
+
+            <div class="footer-links">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#secgen">Secretary General's Letter</a></li>
+                    <li><a href="#committees">Committees</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#apply">Apply</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h5>Contact & Info</h5>
+                <ul>
+                    <li><a href="#venue">Venue & Location</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="mailto:calmunofficial@gmail.com">calmunofficial@gmail.com</a></li>
+                    <li><a href="#academic-team">Academic Board</a></li>
+                    <li><a href="#organization-team">Organization Leads</a></li>
+                    <li><a href="https://canakkaleanadolulisesi.meb.k12.tr/" target="_blank" rel="noopener noreferrer"><i class='bx bx-globe'></i> Merkez Çanakkale Anadolu Lisesi <i class='bx bx-link-external'></i></a></li>
+                    <li><a href="#" class="open-privacy-btn" data-tab="kvkk"><i class='bx bx-shield-quarter'></i> KVKK Aydınlatma Metni</a></li>
+                    <li><a href="#" class="open-privacy-btn" data-tab="acik-riza"><i class='bx bx-check-double'></i> Açık Rıza Metni</a></li>
+                    <li><a href="#" class="open-privacy-btn" data-tab="gdpr"><i class='bx bx-check-shield'></i> GDPR Privacy Notice</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                <a href="https://maps.app.goo.gl/wsjpLr85dwcMqd847" target="_blank" rel="noopener noreferrer" style="color: #cbd5e1;" title="Harita Uygulamasında Aç">
+                    <i class='bx bx-map-pin' style="color: var(--main-color);"></i> İsmetpaşa Mahallesi, Saim Özen Sokak, No: 19 17100 Çanakkale
+                </a> • 
+                <a href="mailto:calmunofficial@gmail.com" style="color: var(--main-color);">calmunofficial@gmail.com</a>
             </p>
 
-            <div class="btn-box btns">
-                <a href="#contact" class="btn">Contact Me</a>
-                <span class="animate scroll" style="--i:5;"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- education section design -->
-    <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span><span class="animate scroll" style="--i:1;"></span></h2>
-
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Education<span class="animate scroll" style="--i:2;"></span></h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2017 - 2018</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Blanditiis dolorem harum
-                                dolorum debitis. Magni, iste! Perferendis
-                                laborum reprehenderit dolorum totam.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2018 - 2019</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Blanditiis dolorem harum
-                                dolorum debitis. Magni, iste! Perferendis
-                                laborum reprehenderit dolorum totam.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2019 - 2020</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Blanditiis dolorem harum
-                                dolorum debitis. Magni, iste! Perferendis
-                                laborum reprehenderit dolorum totam.</p>
-                        </div>
-                    </div>
-
-                    <span class="animate scroll" style="--i:3;"></span>
-                </div>
+            <div class="footer-center-credits">
+                <a href="#faq" class="footer-faq-btn"><i class='bx bx-help-circle'></i> FAQ</a>
+                <span class="dev-badge"><i class='bx bx-code-alt'></i> Geliştirici: <strong>Hakan BİLİR</strong></span>
             </div>
 
-            <div class="education-column">
-                <h3 class="title">Experience<span class="animate scroll" style="--i:5;"></span></h3>
+            <p style="font-weight: 600; color: #cbd5e1;">CALMUN’26 TEAM</p>
 
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2017 - 2018</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Blanditiis dolorem harum
-                                dolorum debitis. Magni, iste! Perferendis
-                                laborum reprehenderit dolorum totam.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2018 - 2019</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Blanditiis dolorem harum
-                                dolorum debitis. Magni, iste! Perferendis
-                                laborum reprehenderit dolorum totam.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2019 - 2020</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Blanditiis dolorem harum
-                                dolorum debitis. Magni, iste! Perferendis
-                                laborum reprehenderit dolorum totam.</p>
-                        </div>
-                    </div>
-
-                    <span class="animate scroll" style="--i:6;"></span>
-                </div>
+            <div class="footer-iconTop">
+                <a href="#home" title="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
             </div>
-        </div>
-    </section>
-
-    <!-- skills section design -->
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span><span class="animate scroll" style="--i:1;"></span></h2>
-
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Coding Skills<span class="animate scroll" style="--i:2;"></span></h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>HTML <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>CSS <span>80%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>JavaScript <span>65%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Python <span>75%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-
-                    <span class="animate scroll" style="--i:3;"></span>
-                </div>
-            </div>
-
-            <div class="skills-column">
-                <h3 class="title">Professional Skills<span class="animate scroll" style="--i:5;"></span></h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>Web Design <span>95%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Web Development <span>67%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Graphic Design <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>SEO Marketing <span>60%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-
-                    <span class="animate scroll" style="--i:6;"></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
-
-        <form action="#">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email" required>
-                    <span class="focus"></span>
-                </div>
-
-                <span class="animate scroll" style="--i:3;"></span>
-            </div>
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
-                    <span class="focus"></span>
-                </div>
-
-                <span class="animate scroll" style="--i:5;"></span>
-            </div>
-
-            <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <span class="focus"></span>
-
-                <span class="animate scroll" style="--i:7;"></span>
-            </div>
-
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-
-                <span class="animate scroll" style="--i:9;"></span>
-            </div>
-        </form>
-    </section>
-
-    <!-- footer design -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2023 | Designed and
-                Maintenance by Nishat Mahmud | All
-                Rights Reserved</p>
-
-            <span class="animate scroll" style="--i:1;"></span>
-        </div>
-
-        <div class="footer-iconTop">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
-
-            <span class="animate scroll" style="--i:3;"></span>
         </div>
     </footer>
 
+    <!-- ==========================================================================
+         INTERACTIVE COMMITTEE MODAL
+         ========================================================================== -->
+    <div class="modal-overlay" id="committeeModal">
+        <div class="modal-card">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <img src="images/committee-ilo.jpg" alt="Committee Banner" class="modal-banner-img" id="modalCommitteeImg">
+            
+            <h3 class="modal-title" id="modalCommitteeTitle">ILO</h3>
+            <div class="modal-subtitle" id="modalCommitteeFullName">International Labour Organization</div>
 
+            <div class="modal-section-block">
+                <h5><i class='bx bx-target-lock'></i> Agenda Item</h5>
+                <div class="modal-agenda-text" id="modalCommitteeAgenda">
+                    Agenda Item Details
+                </div>
+            </div>
+
+            <div class="modal-section-block">
+                <h5><i class='bx bxs-group'></i> Committee Board Members</h5>
+                <ul class="modal-board-list" id="modalCommitteeBoard">
+                    <!-- Populated dynamically by script.js -->
+                </ul>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn download-guide-btn"><i class='bx bx-download'></i> STUDY GUIDE</button>
+                <button class="btn btn-outline open-rules-btn"><i class='bx bx-book-bookmark'></i> RULES OF PROCEDURE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         RULES OF PROCEDURE MODAL (Harvard MUN Procedure)
+         ========================================================================== -->
+    <div class="modal-overlay" id="rulesModal">
+        <div class="modal-card">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <h3 class="modal-title">Rules of Procedure</h3>
+            <div class="modal-subtitle">Harvard MUN Parliamentary Procedure</div>
+
+            <div class="modal-section-block">
+                <h5>1. Roll Call & Quorum</h5>
+                <p style="font-size: 1.45rem; color: #cbd5e1; line-height: 1.6;">
+                    Delegates respond as either <em>"Present"</em> (can abstain during voting on substantive matters) or <em>"Present and Voting"</em> (must vote in favor or against).
+                </p>
+            </div>
+
+            <div class="modal-section-block">
+                <h5>2. General Speakers List (GSL)</h5>
+                <p style="font-size: 1.45rem; color: #cbd5e1; line-height: 1.6;">
+                    The continuous speaking list established at the beginning of committee sessions. Delegates deliver their country's stance on the agenda item.
+                </p>
+            </div>
+
+            <div class="modal-section-block">
+                <h5>3. Moderated & Unmoderated Caucuses</h5>
+                <p style="font-size: 1.45rem; color: #cbd5e1; line-height: 1.6;">
+                    <strong>Moderated Caucus:</strong> Formal debate on a specific sub-topic with allocated speaking times.<br>
+                    <strong>Unmoderated Caucus:</strong> Informal consultation allowing delegates to move freely, negotiate, and collaborate on working papers.
+                </p>
+            </div>
+
+            <div class="modal-section-block">
+                <h5>4. Working Papers & Draft Resolutions</h5>
+                <p style="font-size: 1.45rem; color: #cbd5e1; line-height: 1.6;">
+                    Delegates author comprehensive resolutions featuring preambulatory and operative clauses. Once approved by the Chair, resolutions are introduced and voted upon.
+                </p>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn modal-close-btn" style="position: static; width: 100%; border-radius: var(--radius-sm); height: auto;">
+                    UNDERSTOOD & CLOSE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         APPLICATION MODAL
+         ========================================================================== -->
+    <div class="modal-overlay" id="applyModal">
+        <div class="modal-card">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <h3 class="modal-title">CALMUN 2026 Application</h3>
+            <div class="modal-subtitle">Join us on 4-5-6 December, 2026 in Çanakkale</div>
+
+            <form id="applicationForm" action="https://formsubmit.co/calmunofficial@gmail.com" method="POST">
+                <!-- FormSubmit Configurations & Anti-Spam Honeypot (Cloudflare Security) -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="[CALMUN 2026] Yeni Delege Başvurusu">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div class="form-group">
+                    <label for="applyTypeSelect">Application Category / Kategori</label>
+                    <select id="applyTypeSelect" name="Application_Category" required>
+                        <option value="Delegation (Min 3 People)">Delegation (Minimum 3 People - 3800 TL Early / 3900 TL Regular / 4000 TL Late)</option>
+                        <option value="Individual Delegate">Individual Delegate (1400 TL Early / 1500 TL Regular / 1600 TL Late)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="applicantName">Head Delegate / Delegate Full Name</label>
+                    <input type="text" id="applicantName" name="Delegate_Name" placeholder="Full legal name" maxlength="100" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="applicantEmail">Email Address / E-posta</label>
+                    <input type="email" id="applicantEmail" name="Email" placeholder="yourname@domain.com" maxlength="120" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="applicantPhone">Phone Number / Telefon (WhatsApp)</label>
+                    <input type="tel" id="applicantPhone" name="Phone_Number" placeholder="+90 5XX XXX XX XX" maxlength="25" pattern="[\+]?[0-9\s\-\(\)]{7,25}" title="Lütfen geçerli bir telefon numarası giriniz" autocomplete="tel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="applicantSchool">School / Organization (Okul)</label>
+                    <input type="text" id="applicantSchool" name="School_Organization" placeholder="Name of your high school or institution" maxlength="150" autocomplete="organization" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="applicantPrefCommittee">Preferred Committee / Komite Tercihi</label>
+                    <select id="applicantPrefCommittee" name="Preferred_Committee" required>
+                        <option value="ILO">ILO - International Labour Organization</option>
+                        <option value="UNEP">UNEP - United Nations Environment Programme</option>
+                        <option value="UNHRC">UNHRC - United Nations Human Rights Council</option>
+                        <option value="UNODC">UNODC - United Nations Office on Drugs and Crime</option>
+                    </select>
+                </div>
+
+                <div class="form-checkbox-group">
+                    <input type="checkbox" id="applyKvkk" name="Consent_KVKK_Clarification" required>
+                    <label for="applyKvkk">
+                        <a href="#" class="open-privacy-btn" data-tab="kvkk">KVKK Aydınlatma Metni</a>'ni ve <a href="#" class="open-privacy-btn" data-tab="gdpr">GDPR Privacy Notice</a>'ı okudum, anladım. *
+                    </label>
+                </div>
+
+                <div class="form-checkbox-group">
+                    <input type="checkbox" id="applyAcikRiza" name="Consent_Explicit_Approval" required>
+                    <label for="applyAcikRiza">
+                        <a href="#" class="open-privacy-btn" data-tab="acik-riza">Açık Rıza Metni</a> kapsamında konferans içi fotoğraf ve video kayıtlarımın yayınlanmasına, resmi delege WhatsApp duyuru gruplarına dahil edilmeme ve verilerimin belirtilen amaçlarla işlenmesine açık rıza veriyorum. *
+                    </label>
+                </div>
+
+                <button type="submit" class="btn" id="applySubmitBtn" style="width: 100%; margin-top: 1.5rem;">
+                    <i class='bx bx-check-shield'></i> SUBMIT APPLICATION
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         KVKK & GDPR PRIVACY MODAL
+         ========================================================================== -->
+    <div class="modal-overlay" id="privacyModal">
+        <div class="modal-card privacy-modal-card">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <h3 class="modal-title">Kişisel Verilerin Korunması & Privacy Policy</h3>
+            <div class="modal-subtitle">CALMUN 2026 • 6698 Sayılı KVKK & Regulation (EU) 2016/679 (GDPR)</div>
+
+            <div class="privacy-tabs">
+                <button class="privacy-tab-btn active" data-privacy-tab="kvkk">
+                    <i class='bx bx-shield-quarter'></i> KVKK Aydınlatma Metni
+                </button>
+                <button class="privacy-tab-btn" data-privacy-tab="acik-riza">
+                    <i class='bx bx-check-double'></i> Açık Rıza Metni
+                </button>
+                <button class="privacy-tab-btn" data-privacy-tab="gdpr">
+                    <i class='bx bx-globe'></i> GDPR Privacy Notice
+                </button>
+            </div>
+
+            <!-- KVKK Content -->
+            <div class="privacy-tab-content active" id="privacy-kvkk">
+                <div class="privacy-block">
+                    <h5>1. Veri Sorumlusu</h5>
+                    <p>
+                        6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, <strong>Merkez Çanakkale Anadolu Lisesi Model United Nations (“CALMUN 2026”) Organizasyon Komitesi</strong> ve okul yönetimi olarak veri sorumlusu sıfatıyla hareket etmekteyiz.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>2. İşlenen Kişisel Veriler</h5>
+                    <p>Konferans başvuru, akreditasyon ve yürütme süreçlerinde aşağıdaki veriler işlenmektedir:</p>
+                    <ul>
+                        <li><strong>Kimlik Bilgileri:</strong> Ad, soyad, doğum tarihi, T.C. kimlik/pasaport no (yalnızca MEB resmi izin ve akreditasyon süreçlerinde talep edildiğinde).</li>
+                        <li><strong>İletişim Bilgileri:</strong> E-posta adresi, telefon numarası (WhatsApp bilgilendirme grupları dahil).</li>
+                        <li><strong>Eğitim & Kurum Bilgisi:</strong> Temsil edilen okul/kurum adı, sınıf düzeyi, danışman öğretmen bilgileri.</li>
+                        <li><strong>Etkinlik & Katılım Bilgisi:</strong> Delege statüsü (bireysel/delegasyon), komite ve ülke tercihleri, oturum devam takip verileri.</li>
+                        <li><strong>Görsel & İşitsel Kayıtlar:</strong> Konferans oturumları, açılış-kapanış törenleri ve sosyal etkinlikler sırasında çekilen fotoğraf ve video kayıtları.</li>
+                        <li><strong>Finansal Bilgiler:</strong> Katılım ücreti ödeme makbuzu veya dekont bilgileri.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>3. Kişisel Verilerin İşlenme Amaçları</h5>
+                    <p>Toplanan kişisel verileriniz;</p>
+                    <ul>
+                        <li>CALMUN 2026 delege ve heyet akreditasyonunun eksiksiz yapılması,</li>
+                        <li>Komite ve ülke tahsislerinin adil, akademik liyakat kurallarına uygun biçimde organize edilmesi,</li>
+                        <li>Yaka kartları, karşılama setleri ve basılı katılım sertifikalarının (Hard Copy) hazırlanması,</li>
+                        <li>3 günlük öğle yemeği ve ara ikramların lojistik planlaması,</li>
+                        <li>Konferansın güvenliği, acil durum yönetimi ve Millî Eğitim Bakanlığı (MEB) mevzuatına uygun şekilde arşivlenmesi amaçlarıyla işlenmektedir.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>4. Hukuki Sebepler ve Veri Güvenliği</h5>
+                    <p>
+                        Kişisel verileriniz; KVKK’nın 5. maddesinde belirtilen <em>“açık rızanın bulunması”</em>, <em>“bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması”</em> ve <em>“veri sorumlusunun meşru menfaatleri”</em> hukuki sebeplerine dayalı olarak elektronik başvuru formları aracılığıyla toplanmaktadır. Verileriniz ticari veya reklam amaçlı hiçbir üçüncü tarafa satılmaz ya da devredilmez.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>5. 18 Yaş Altı Katılımcılar & Veli Onayı</h5>
+                    <p>
+                        Katılımcıların lise öğrencisi olması sebebiyle, konferansa katılım formunun doldurulması katılımcının ve yasal velisinin bilgilendirildiğini ve gerekli veli izin belgesinin okul idaresine teslim edileceğini taahhüt eder.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>6. İlgili Kişinin Hakları (KVKK Madde 11)</h5>
+                    <p>
+                        KVKK’nın 11. maddesi uyarınca veri sahipleri; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, amaca uygun kullanılıp kullanılmadığını öğrenme, eksik veya yanlış işlenmişse düzeltilmesini isteme ve silinmesini talep etme haklarına sahiptir. Taleplerinizi <strong>calmunofficial@gmail.com</strong> adresine iletebilirsiniz.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Açık Rıza Metni Content (KVKK m. 5 ve m. 6 - 7499 Sayılı Kanun Güncel) -->
+            <div class="privacy-tab-content" id="privacy-acik-riza">
+                <div class="privacy-block">
+                    <h5>1. Açık Rızanın Niteliği ve Hukuki Dayanağı</h5>
+                    <p>
+                        İşbu Açık Rıza Metni; <strong>6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”)</strong>’nun 3. maddesinin 1. fıkrasının (a) bendi ve 5. ile 6. maddeleri ile 7499 sayılı Kanun ile getirilen güncel yasal düzenlemeler uyarınca hazırlanmıştır. Açık rıza, <em>“belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan”</em> rızayı ifade eder.
+                    </p>
+                    <p style="margin-top: 0.6rem;">
+                        İşbu Açık Rıza Metni, KVKK Aydınlatma Metni’nden tamamen bağımsız olarak tanzim edilmiş olup, açık rıza verilmesi konferans başvurusunun zorunlu bir koşulu (hizmet şartına bağlanmış rıza) olarak ileri sürülmemektedir. Katılımcı açık rıza vermeksizin de yasal zorunluluk ve sözleşme ifası kapsamındaki konferans süreçlerinden faydalanabilir.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>2. Açık Rızaya Konu Özel Veri İşleme Faaliyetleri</h5>
+                    <p>Aşağıda belirtilen veri işleme ve aktarım faaliyetlerine açık rızanız ile onay verilmektedir:</p>
+                    <ul>
+                        <li>
+                            <strong>Görsel ve İşitsel Kayıtların Yayınlanması:</strong> CALMUN 2026 konferansı süresince komite oturumlarında, genel kurulda, açılış ve kapanış merasimlerinde çekilen profesyonel fotoğraf ve video kayıtlarınızın; Merkez Çanakkale Anadolu Lisesi ve CALMUN resmi web sitelerinde, dijital bültenlerde, konferans anı kitapçığında ve resmi sosyal medya hesaplarında (Instagram, LinkedIn, YouTube vb.) tanıtım, akademik arşivleme ve kamuoyunu bilgilendirme amacıyla işlenmesi ve umuma iletilmesi.
+                        </li>
+                        <li>
+                            <strong>Delege İletişim ve Koordinasyon Grupları:</strong> Oturum zamanlamaları, yönerge duyuruları, komite kriz senaryoları ve acil koordinasyonun sağlanabilmesi adına ad-soyad ve telefon numarası bilgilerinizin WhatsApp veya benzeri anlık mesajlaşma platformlarında oluşturulacak resmi CALMUN 2026 komite ve heyet gruplarında diğer katılımcılarla paylaşılması.
+                        </li>
+                        <li>
+                            <strong>Yurt Dışı Veri Aktarımı (Kanun m. 9):</strong> Konferans başvuru formu altyapısı, e-posta bildirimleri ve dijital form servislerinin sunucularının yurt dışında bulunması durumunda, başvurunuzun işleme alınabilmesi ve onay e-postalarının iletilebilmesi amacıyla sınırlı olarak teknik altyapı sağlayıcılarına aktarılması.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>3. 18 Yaş Altı Katılımcılar (Öğrenci Delegeler) & Veli Muvafakati</h5>
+                    <p>
+                        18 yaşını doldurmamış katılımcılar bakımından, Türk Medeni Kanunu ve Kişisel Verileri Koruma Kurulu ilke kararları doğrultusunda işbu açık rıza beyanının yasal veli/vasinin bilgisi, onayı ve gözetimi dahilinde verildiği; delege kayıt formunun iletilmesiyle birlikte veli muvafakatinin mevcut olduğu ve okul idaresine ibraz edilecek veli izin formu ile teyit edildiği kabul edilir.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>4. Açık Rızanın Geri Alınması (İptal Hakkı)</h5>
+                    <p>
+                        Verdiğiniz açık rızayı dilediğiniz zaman hiçbir gerekçe göstermeksizin ve herhangi bir hak kaybına uğramaksızın geri alma hakkına sahipsiniz. Açık rızanızı geri almak için talebinizi içeren e-postayı <strong>calmunofficial@gmail.com</strong> adresine iletmeniz durumunda, rızaya dayalı veri işleme ve yayınlama faaliyetleri derhal durdurulacaktır.
+                    </p>
+                </div>
+            </div>
+
+            <!-- GDPR Content -->
+            <div class="privacy-tab-content" id="privacy-gdpr">
+                <div class="privacy-block">
+                    <h5>1. Data Controller & Scope</h5>
+                    <p>
+                        In accordance with the <strong>General Data Protection Regulation (Regulation (EU) 2016/679 - "GDPR")</strong>, the Executive Committee of <strong>CALMUN 2026</strong> (Merkez Çanakkale Anadolu High School Model United Nations) acts as the Data Controller regarding personal data collected from conference participants, advisors, and guests.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>2. Legal Basis for Processing (Art. 6 GDPR)</h5>
+                    <p>We process personal data under the following legal bases:</p>
+                    <ul>
+                        <li><strong>Consent (Art. 6(1)(a)):</strong> Explicit consent given when applying or contacting via this website.</li>
+                        <li><strong>Performance of Contract (Art. 6(1)(b)):</strong> Necessary for administering your conference registration, delegate credentials, committee assignment, and certificates.</li>
+                        <li><strong>Legitimate Interests (Art. 6(1)(f)):</strong> Educational archiving, academic integrity, and physical security of school premises.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>3. Categories of Data & Retention</h5>
+                    <p>
+                        Collected information includes names, contact email/phone, school affiliations, committee preferences, catering requirements, and audio-visual recordings captured during public sessions. Data is retained strictly as long as necessary to validate participation and maintain academic conference archives.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>4. Protection of Minors (High School Delegates)</h5>
+                    <p>
+                        CALMUN 2026 strictly protects youth participants. All student delegates confirm parental/legal guardian awareness for conference participation and compliance with school travel regulations.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h5>5. Your Rights Under GDPR (Articles 15–22)</h5>
+                    <p>Data subjects are entitled to the following rights:</p>
+                    <ul>
+                        <li><strong>Right of Access (Art. 15):</strong> Request a copy of personal data held about you.</li>
+                        <li><strong>Right to Rectification (Art. 16):</strong> Correct inaccurate or incomplete information.</li>
+                        <li><strong>Right to Erasure ("Right to be Forgotten", Art. 17):</strong> Request deletion of data where retention is no longer justified.</li>
+                        <li><strong>Right to Restriction & Objection (Arts. 18, 21):</strong> Restrict or object to specific processing activities.</li>
+                        <li><strong>Right to Data Portability (Art. 20):</strong> Receive your submitted data in a standard structured format.</li>
+                    </ul>
+                    <p style="margin-top: 0.8rem;">
+                        To exercise any of these rights, please contact the CALMUN Data Protection Team at <strong>calmunofficial@gmail.com</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal-actions" style="margin-top: 2rem;">
+                <button class="btn modal-close-btn" style="position: static; width: 100%; border-radius: var(--radius-sm); height: auto;">
+                    ANLADIM VE KAPAT / CLOSE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         SUBMISSION SUCCESS & CONFIRMATION MODAL
+         ========================================================================== -->
+    <div class="modal-overlay" id="formSuccessModal">
+        <div class="modal-card" style="max-width: 580px; text-align: center; padding: 3.5rem 3rem;">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <div style="font-size: 5rem; color: #10b981; margin-bottom: 1.2rem; filter: drop-shadow(0 0 25px rgba(16, 185, 129, 0.45));">
+                <i class='bx bxs-check-circle'></i>
+            </div>
+            <h3 class="modal-title" id="successModalTitle" style="font-size: 2.4rem;">Başvurunuz Başarıyla Alındı!</h3>
+            <div class="modal-subtitle" style="color: var(--accent-gold); margin-bottom: 1.5rem;">CALMUN 2026 • Merkez Çanakkale Anadolu Lisesi</div>
+
+            <!-- Reference Tracking ID Box with Copy Button -->
+            <div style="background: rgba(6, 20, 33, 0.7); border: 1px dashed var(--main-color); border-radius: var(--radius-sm); padding: 1.2rem 1.6rem; margin-bottom: 1.8rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+                <div style="text-align: left;">
+                    <div style="font-size: 1.15rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Referans Takip Kodu</div>
+                    <div id="successRefCode" style="font-size: 2.2rem; font-weight: 800; color: var(--main-color); letter-spacing: 1.5px; font-family: 'Outfit', sans-serif;">CALMUN-APP-XXXX</div>
+                </div>
+                <button id="copyRefBtn" type="button" class="btn btn-outline" style="padding: 0.6rem 1.4rem; font-size: 1.3rem; height: auto;" title="Kodu Kopyala">
+                    <i class='bx bx-copy'></i> Kopyala
+                </button>
+            </div>
+
+            <!-- Dynamic Submission Summary -->
+            <div id="successSummaryBox" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-sm); padding: 1.4rem; text-align: left; margin-bottom: 1.8rem; font-size: 1.35rem; color: #cbd5e1; line-height: 1.8;">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <p id="successModalMsg" style="font-size: 1.4rem; color: #94a3b8; line-height: 1.6; margin-bottom: 2rem;">
+                Bilgileriniz CALMUN Sekreteryasına güvenle kaydedildi. Başvuru değerlendirmeniz sonucunda resmi kabul ve yönerge mektubu kayıtlı e-posta adresinize iletilecektir.
+            </p>
+
+            <!-- Actions Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;">
+                <button type="button" id="downloadReceiptBtn" class="btn btn-outline" style="font-size: 1.35rem; padding: 1rem; height: auto;">
+                    <i class='bx bx-download'></i> Belgeyi İndir (.txt)
+                </button>
+                <button type="button" id="copySummaryBtn" class="btn btn-outline" style="font-size: 1.35rem; padding: 1rem; height: auto;">
+                    <i class='bx bx-copy-alt'></i> Özeti Kopyala
+                </button>
+            </div>
+
+            <div id="fallbackMailtoContainer" style="display: none; margin-bottom: 1.2rem;">
+                <a href="#" id="fallbackMailtoBtn" class="btn" style="width: 100%; background: linear-gradient(135deg, var(--accent-gold), #d97706); color: #061421; font-weight: 700; font-size: 1.35rem; padding: 1rem;">
+                    <i class='bx bx-envelope'></i> E-Posta İstemcisinde Aç
+                </a>
+            </div>
+
+            <button type="button" class="btn modal-close-btn" style="position: static; width: 100%; border-radius: var(--radius-sm); height: auto; padding: 1.1rem; font-size: 1.45rem;">
+                Tamam / Kapat
+            </button>
+        </div>
+    </div>
+
+    <!-- 2026 Floating Dynamic Back-To-Top Button with Circular Progress Ring -->
+    <button id="backToTop" class="back-to-top" aria-label="Başa Dön" title="Sayfa Başına Dön">
+        <svg class="progress-ring" width="48" height="48" viewBox="0 0 48 48">
+            <circle class="progress-ring-circle-bg" stroke="rgba(255, 255, 255, 0.12)" stroke-width="3.5" fill="transparent" r="20" cx="24" cy="24" />
+            <circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="3.5" stroke-dasharray="125.66" stroke-dashoffset="125.66" fill="transparent" r="20" cx="24" cy="24" />
+        </svg>
+        <i class='bx bx-chevron-up'></i>
+    </button>
+
+    <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
 
