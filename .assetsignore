@@ -1,0 +1,8 @@
+.git
+.github
+.wrangler
+__pycache__
+data
+server.py
+node_modules
+google_apps_script.js
